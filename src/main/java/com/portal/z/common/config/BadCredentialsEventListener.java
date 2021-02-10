@@ -110,8 +110,7 @@ public class BadCredentialsEventListener {
         user.setLock_flg(lock); // ロック状態
         user.setUpdate_user(userId); // 更新者はログインしようとしているユーザ
 
-        // パスワード更新
-        // 更新実行
+        // ロック(更新処理)実行
         boolean result = userService.updateLockflg(user);
 
         return result;
